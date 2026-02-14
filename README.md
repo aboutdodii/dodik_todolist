@@ -1,1 +1,47 @@
-# dodik_bima_todolist
+# Todo List API - Technical Test
+
+Repositori ini berisi implementasi REST API sederhana untuk pengelolaan Todo List, yang dibangun sebagai bagian dari seleksi magang di **PT. Acarya Data Esa**.
+
+## 🚀 Tech Stack
+- **Framework:** .NET 8 (ASP.NET Core Web API)
+- **Database:** SQLite (File-based)
+- **ORM:** Entity Framework Core
+- **Documentation:** Swagger / OpenAPI
+
+## 🏗️ Architectural Decisions
+- **Layered Structure:** Mengikuti standar minimal requirement (/Controllers, /Models, /Data).
+- **DTO Pattern:** Menggunakan Data Transfer Object untuk validasi input dan keamanan data (mencegah *mass-assignment vulnerability*).
+- **Asynchronous Programming:** Menggunakan `async/await` pada semua operasi I/O untuk memastikan aplikasi tetap scalable.
+- **Guid as Primary Key:** Menggunakan GUID untuk keamanan dan fleksibilitas data jangka panjang.
+
+## 🛠️ Cara Menjalankan Project
+
+1. **Clone Repository**
+   ```bash
+   git clone [https://github.com/username/nama_candidate_todolist.git](https://github.com/username/nama_candidate_todolist.git)
+   cd nama_candidate_todolist
+Restore Dependencies
+
+Bash
+dotnet restore
+Database Migration
+Pastikan tool dotnet-ef sudah terinstall, lalu jalankan:
+
+Bash
+dotnet ef database update
+Running the App
+
+Bash
+dotnet run
+Setelah running, API dapat diakses melalui: https://localhost:5001/swagger (atau port yang tertera di terminal).
+
+📝 API Endpoints
+GET /api/todos - Mengambil semua daftar todo (Terbaru di atas).
+
+POST /api/todos - Membuat todo baru.
+
+GET /api/todos/{id} - Mengambil detail todo berdasarkan ID.
+
+PUT /api/todos/{id}/complete - Menandai todo sebagai selesai.
+
+DELETE /api/todos/{id} - Menghapus todo.
