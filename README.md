@@ -20,20 +20,25 @@ Repositori ini berisi implementasi REST API sederhana untuk pengelolaan Todo Lis
    ```bash
    git clone [https://github.com/username/nama_candidate_todolist.git](https://github.com/username/nama_candidate_todolist.git)
    cd nama_candidate_todolist
+   
 Restore Dependencies
 
-Bash
+```bash
 dotnet restore
-Database Migration
+Database Migration 
+```
 Pastikan tool dotnet-ef sudah terinstall, lalu jalankan:
 
-Bash
+```bash
 dotnet ef database update
+```
+
 Running the App
 
-Bash
+```bash
 dotnet run
-Setelah running, API dapat diakses melalui: https://localhost:5001/swagger (atau port yang tertera di terminal).
+```
+Setelah running, API dapat diakses melalui: https://localhost:****/swagger (port yang tertera di terminal).
 
 📝 API Endpoints
 GET /api/todos - Mengambil semua daftar todo (Terbaru di atas).
