@@ -19,14 +19,14 @@ Repositori ini berisi implementasi REST API sederhana untuk pengelolaan Todo Lis
 1. **Clone Repository**
    ```bash
    git clone [https://github.com/aboutdodii/dodik_bima_todolist.git](https://github.com/aboutdodii/dodik_bima_todolist.git)
-   cd dodik_bima_todolist
+   cd dodik_todolist
    
 Restore Dependencies
 
 ```bash
 dotnet restore
-Database Migration 
 ```
+Database Migration 
 Pastikan tool dotnet-ef sudah terinstall, lalu jalankan:
 
 ```bash
